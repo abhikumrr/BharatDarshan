@@ -1,4 +1,4 @@
-import type { Article } from "@/app/generated/prisma/client";
+import { type Article } from "@prisma/client";
 import Link from "next/link";
 
 export default function ArticleCard({ article }: { article: Article }) {

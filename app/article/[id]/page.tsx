@@ -1,4 +1,4 @@
-import { PrismaClient } from "@/app/generated/prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { notFound } from "next/navigation";
 
 const prisma = new PrismaClient();
@@ -41,7 +41,7 @@ export default async function ArticlePage({
       )}
 
       <div style={{ fontSize: "1.2rem", lineHeight: "1.8", color: "#222" }}>
-        {article.content.split('\n').map((paragraph, idx) => (
+        {article.content.split('\n').map((paragraph: string, idx: number) => (
           <p key={idx} style={{ marginBottom: "1.5rem" }}>
             {paragraph}
           </p>

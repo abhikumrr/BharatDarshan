@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import ArticleCard from "@/app/components/ArticleCard";
 import { getUserArticles } from "@/app/actions/article";
-import type { Article } from "@/app/generated/prisma/client";
+import { Prisma } from "@prisma/client";
+
+type Article = Prisma.ArticleGetPayload<{}>;
 
 export default function ProfilePage() {
   const { data: session, status } = useSession();
