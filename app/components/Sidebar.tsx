@@ -8,6 +8,11 @@ const categories = [
   { name: "Philosophy", slug: "philosophy" },
   { name: "History", slug: "history" },
   { name: "Geography", slug: "geography" },
+  { name: "Music & Instruments", slug: "music-instruments" },
+  { name: "Wildlife & Nature", slug: "wildlife-nature" },
+  { name: "Sports & Martial Arts", slug: "sports-martial-arts" },
+  { name: "Science & Inventions", slug: "science-inventions" },
+  { name: "Literature & Poetry", slug: "literature-poetry" },
 ];
 
 export default function Sidebar() {
@@ -107,7 +112,7 @@ export default function Sidebar() {
         <div className="sidebar-topics">
           <h4>Recommended Topics</h4>
           <div className="topic-chips">
-            {["Philosophy", "History", "Geography", "Science", "Technology"].map(
+            {["Philosophy", "Music & Instruments", "Science & Inventions", "Literature & Poetry", "Wildlife & Nature"].map(
               (topic) => (
                 <span key={topic} className="topic-chip">
                   {topic}

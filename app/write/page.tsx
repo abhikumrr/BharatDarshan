@@ -89,6 +89,11 @@ export default function WriteArticlePage() {
               <option value="Philosophy">Philosophy</option>
               <option value="History">History</option>
               <option value="Geography">Geography</option>
+              <option value="Music & Instruments">Music & Instruments</option>
+              <option value="Wildlife & Nature">Wildlife & Nature</option>
+              <option value="Sports & Martial Arts">Sports & Martial Arts</option>
+              <option value="Science & Inventions">Science & Inventions</option>
+              <option value="Literature & Poetry">Literature & Poetry</option>
             </select>
           </div>
           

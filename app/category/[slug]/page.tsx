@@ -6,6 +6,11 @@ const categoryNames: Record<string, string> = {
   philosophy: "Philosophy",
   history: "History",
   geography: "Geography",
+  "music-instruments": "Music & Instruments",
+  "wildlife-nature": "Wildlife & Nature",
+  "sports-martial-arts": "Sports & Martial Arts",
+  "science-inventions": "Science & Inventions",
+  "literature-poetry": "Literature & Poetry",
 };
 
 export function generateStaticParams() {
@@ -13,6 +18,11 @@ export function generateStaticParams() {
     { slug: "philosophy" },
     { slug: "history" },
     { slug: "geography" },
+    { slug: "music-instruments" },
+    { slug: "wildlife-nature" },
+    { slug: "sports-martial-arts" },
+    { slug: "science-inventions" },
+    { slug: "literature-poetry" },
   ];
 }
 
@@ -23,7 +33,7 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
   const categoryName = categoryNames[slug] || slug;
-  const articles = await getArticles(slug);
+  const articles = await getArticles(categoryName);
 
   return (
     <div className="page-layout">
